@@ -29,7 +29,12 @@
             function checkScore() {
                 // alert("I am working")
                 var score=document.getElementById("score").value;
-                if (score >=-1 && score <=-200){
+                if (score >="" && score <=""){
+                    // alert ("Invalid")
+                    var result ="Invalid";
+                    showScore.innerHTML = result;
+                    showScore.style.color = "red";                    
+                } else if (score >=-1 && score <=-20000){
                     // alert ("Not accecpted")
                     var result ="Not accepted";
                     showScore.innerHTML = result;
@@ -38,8 +43,7 @@
                     // alert ("You failed")
                     var result ="Failed (F)";
                     showScore.innerHTML = result;
-                    showScore.style.color = "red";
-                    
+                    showScore.style.color = "red";                    
                 } else if (score >=40 && score <=44){
                     // alert ("You Pass")
                     var result ="Pass  (E)";
@@ -65,11 +69,11 @@
                     var result ="Excellent  (A)";
                     showScore.innerHTML = result;
                     showScore.style.color = "white";
-                }   else if (score >=101 && score <=1000){
+                }   else if (score >=101 && score <=20000){
                     // alert ("Enter correct score")
                     var result ="Enter correct score";
                     showScore.innerHTML = result;
-                    showScore.style.color = "white";
+                    showScore.style.color = "red";
                 }                    
             }
         </script>                

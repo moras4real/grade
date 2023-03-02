@@ -34,12 +34,7 @@
                     var result ="Invalid";
                     showScore.innerHTML = result;
                     showScore.style.color = "red";                    
-                } else if (score >=-1 && score <=-20000){
-                    // alert ("Not accecpted")
-                    var result ="Not accepted";
-                    showScore.innerHTML = result;
-                    showScore.style.color = "red";
-                } else if (score >=0 && score <=39){
+                }  else if (score >=0 && score <=39){
                     // alert ("You failed")
                     var result ="Failed (F)";
                     showScore.innerHTML = result;
@@ -53,8 +48,6 @@
                     // alert ("You get Average")
                     var result ="Average  (D)";
                     showScore.innerHTML = result;
-                    showScore.style.color = "yellow";
-                } else if (score >=50 && score <=59){
                     // alert ("You get Credit")
                     var result ="Credit  (C)";
                     showScore.innerHTML = result;
@@ -74,7 +67,12 @@
                     var result ="Enter correct score";
                     showScore.innerHTML = result;
                     showScore.style.color = "red";
-                }                    
+                } else {
+                    // alert ("Not accecpted")
+                    var result ="Not accepted";
+                    showScore.innerHTML = result;
+                    showScore.style.color = "red";
+                }                   
             }
         </script>                
     </body>

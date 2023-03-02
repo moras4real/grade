@@ -29,26 +29,32 @@
             function checkScore() {
                 // alert("I am working")
                 var score=document.getElementById("score").value;
-                if (score >=0 && score <=39){
+                if (score >=-1 && score <=-200){
+                    // alert ("Not accecpted")
+                    var result ="Not accepted";
+                    showScore.innerHTML = result;
+                    showScore.style.color = "red";
+                } else if (score >=0 && score <=39){
                     // alert ("You failed")
                     var result ="Failed (F)";
                     showScore.innerHTML = result;
-                    showScore.style.color = "yellow";
+                    showScore.style.color = "red";
+                    
                 } else if (score >=40 && score <=44){
                     // alert ("You Pass")
                     var result ="Pass  (E)";
                     showScore.innerHTML = result;
-                    showScore.style.color = "red";
+                    showScore.style.color = "yellow";
                 } else if (score >=45 && score <=49){
                     // alert ("You get Average")
                     var result ="Average  (D)";
                     showScore.innerHTML = result;
-                    showScore.style.color = "red";
+                    showScore.style.color = "yellow";
                 } else if (score >=50 && score <=59){
                     // alert ("You get Credit")
                     var result ="Credit  (C)";
                     showScore.innerHTML = result;
-                    showScore.style.color = "red";
+                    showScore.style.color = "white";
                 } else if (score >=60 && score <=69){
                     // alert ("You get Good")
                     var result ="Good  (B)";
@@ -58,7 +64,12 @@
                     // alert ("You get Excellent")
                     var result ="Excellent  (A)";
                     showScore.innerHTML = result;
-                    showScore.style.color = "green";
+                    showScore.style.color = "white";
+                }   else if (score >=101 && score <=1000){
+                    // alert ("Enter correct score")
+                    var result ="Enter correct score";
+                    showScore.innerHTML = result;
+                    showScore.style.color = "white";
                 }                    
             }
         </script>                
